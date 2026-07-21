@@ -9,3 +9,11 @@ The brachistochrone problem is one of the most well-known optimization problems 
 ## Classical Electrobrachistochrone
 
 We consider a free-space region with an electric field. There is a particle with an initial velocity of zero, $v_0 = 0$, and charge $q = 1$ without loss of generality. Due to the influence of the field, it starts to move from the initial point $A$ to the final point $B$ along a wire. We aim to find the path that minimizes the travel time for different kinds of electric potentials.
+
+### Numerical Implementation
+
+We start by discretizing the plane into $N$ points: $x \in [0,N], \qquad y\in [0,N], \qquad (x_i,y_i)$
+Once we have the points, we can define the electric potential as $N \times N$ matrix whose entries will be the values of the potential energy:          
+$$ \phi_{ij} = \phi(x_i,y_j) $$
+
+We will see that when we run the algorithm for optimization, knowing the values of the electric potential on the grid points won't be enough, and we will need the values inside the cells also, so for that reason I use the weighted average. The idea is simple because we know the field value and cell nodes, and a point with coordinates $(x_0,y_0)$ is somewhere inside the cell we define $ t_x =  
