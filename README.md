@@ -1,4 +1,4 @@
-Numerical Method for Solving the Classical and Relativistic Electrobrachistochrone
+#Numerical Method for Solving the Classical and Relativistic Electrobrachistochrone
 
 
 
