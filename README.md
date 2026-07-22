@@ -120,13 +120,11 @@ y_{\mathrm{line}}(s)=y_A+(y_B-y_A)s,
 $$
 
 and then deform it according to
-
 $$
-y_{\mathrm{guess}}
-=
-y_A+(y_B-y_A)s
+y_{\mathrm{guess}} = y_A+(y_B-y_A)s
 -0.4|y_A-y_B|\sin(\pi s).
 $$
+
 
 The L-BFGS-B algorithm then calculates the travel time along each path and selects the one that yields the smallest value.
 
