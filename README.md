@@ -119,10 +119,12 @@ y_{\mathrm{line}}(s)=y_A+(y_B-y_A)s,
 0\le s\le1,
 $$
 
-and then deform it according to
+and then deform it according to:
 $$
-y_{\mathrm{guess}} = y_A+(y_B-y_A)s
--0.4|y_A-y_B|\sin(\pi s).
+y_{\mathrm{guess}}
+=
+y_A+\left(y_B-y_A\right)s
+-0.4\,|y_A-y_B|\sin(\pi s).
 $$
 
 
