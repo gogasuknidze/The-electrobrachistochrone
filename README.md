@@ -170,14 +170,14 @@ $$
 K=qE_0(y_A-y).
 $$
 
-Based on this, the Lorentz factor can be written as
+Based on this, the Lorentz factor becomes
 
 $$
 \gamma=
 1+\frac{qE_0(y_A-y)}{mc^2}.
 $$
 
-The relativistic velocity is therefore
+The relativistic velocity can then be expressed as
 
 $$
 v_{\mathrm{rel}}(y)=
@@ -213,9 +213,9 @@ $$
 \eta\approx1,
 $$
 
-the motion is quasi-relativistic.
+the motion is in the quasi-relativistic regime.
 
-Finally, for
+Finally, if
 
 $$
 \eta\gg1,
@@ -223,10 +223,11 @@ $$
 
 the motion is in the relativistic regime.
 
-The optimization algorithm is almost the same as in the classical case. The only modifications are the parameters defined above.
+The optimization algorithm is almost the same as in the classical case. The only changes are the parameters that are defined differently.
 
-From physical intuition, we expect the optimal path in the relativistic regime to approach a straight line. At relativistic velocities, further increases in speed become negligible, so there is no longer an advantage in initially descending to gain additional velocity. Instead, the particle should follow the shortest path between the two points. This prediction is also supported by analytical derivations available in the literature, which show that the relativistic solution for this situation is a straight line.
+From physical intuition, we expect the optimal path in the relativistic regime to be a straight line. At relativistic velocities, there is no advantage in initially descending because any further increase in velocity becomes negligible. Therefore, the particle should choose the shortest path between the initial and final points.
 
+This prediction is also supported by analytical derivations available in the literature, which show that the solution for this situation is indeed a straight line.
 
 
 
