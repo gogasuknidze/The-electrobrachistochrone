@@ -173,16 +173,14 @@ $$
 Based on this, the Lorentz factor can be written as
 
 $$
-\gamma
-=
+\gamma=
 1+\frac{qE_0(y_A-y)}{mc^2}.
 $$
 
 The relativistic velocity is therefore
 
 $$
-v_{\mathrm{rel}}(y)
-=
+v_{\mathrm{rel}}(y)=
 c\sqrt{
 1-
 \frac{1}
