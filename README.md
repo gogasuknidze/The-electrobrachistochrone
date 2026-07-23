@@ -148,16 +148,87 @@ where \(\lambda\) determines how strongly the smoothness requirement is enforced
 
 ## Relativistic Electrobrachistochrone
 
-For the relativistic case we only consider moving charged particle in unfirom electric field, pointing downwards: $vec{E} = (0,-E)$. So, in the code I don't define the electric potential, I just define the electrical field strength and construct the suitable paramets for optimization based on that. 
-Relativistic kinetik energy: $ K = (\gamma - 1)mc^2, \qquad \gamma = frac{1}{\sqrt{1-frac{v^2}{c^2}}}$.
-At every point transfered energy is: $ K=qE_0(y_A-y) $
-based on this we can express the $\gamma$ factor becomes: $\gamma=1-frac{qE_0(y_A-y)}{mc^2}$
-relativistic velocity can be expressed as: $v_{\mathrm{rel}}(y)= c\times\sqrt{1 - frac{1}{(1+frac{qE_0(y_A-y)}{mc^2})^2}}$
-from these definitions in order to control the regime we use the factor: $ \eta = frac{qE_0\Delta y}{mc^2}$
-if $\eta \ll 1 $ then we have the non-relativstic case, if $\eta \approx 1$ we have quasyrelativistic case, and for $\eta \gg 1$ we will have relativstic regime. 
-Algorithm used for optimization is almost same as in calssical case, only changes made are the parameters what we defined differently. 
-Physical intuition tells us that in relativstic case straight path should be straight line. Because when velocities are reltaivstic there is no need of initial decline because increment of velocity becomes negligable so particle should choose the correct path. There exists also articles where analytic derivation of the same situation shows that path is straight line in relativistic regime. 
+For the relativistic case, we only consider a charged particle moving in a uniform electric field pointing downwards,
 
+$$
+\vec{E}=(0,-E_0).
+$$
+
+Therefore, in the code I do not define the electric potential. Instead, I define the electric field strength and construct the parameters required for the optimization directly from it.
+
+The relativistic kinetic energy is
+
+$$
+K=(\gamma-1)mc^2,
+\qquad
+\gamma=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}.
+$$
+
+At every point, the transferred energy is
+
+$$
+K=qE_0(y_A-y).
+$$
+
+Based on this, the Lorentz factor can be written as
+
+$$
+\gamma
+=
+1+\frac{qE_0(y_A-y)}{mc^2}.
+$$
+
+The relativistic velocity is therefore
+
+$$
+v_{\mathrm{rel}}(y)
+=
+c\sqrt{
+1-
+\frac{1}
+{\left(
+1+\frac{qE_0(y_A-y)}{mc^2}
+\right)^2}
+}.
+$$
+
+From these definitions, we introduce the parameter
+
+$$
+\eta
+=
+\frac{qE_0\Delta y}{mc^2},
+$$
+
+which controls the physical regime.
+
+If
+
+$$
+\eta\ll1,
+$$
+
+the motion is non-relativistic.
+
+If
+
+$$
+\eta\approx1,
+$$
+
+the motion is quasi-relativistic.
+
+Finally, for
+
+$$
+\eta\gg1,
+$$
+
+the motion is in the relativistic regime.
+
+The optimization algorithm is almost the same as in the classical case. The only modifications are the parameters defined above.
+
+From physical intuition, we expect the optimal path in the relativistic regime to approach a straight line. At relativistic velocities, further increases in speed become negligible, so there is no longer an advantage in initially descending to gain additional velocity. Instead, the particle should follow the shortest path between the two points. This prediction is also supported by analytical derivations available in the literature, which show that the relativistic solution for this situation is a straight line.
 
 
 
