@@ -193,8 +193,7 @@ $$
 From these definitions, we introduce the parameter
 
 $$
-\eta
-=
+\eta=
 \frac{qE_0\Delta y}{mc^2},
 $$
 
