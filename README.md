@@ -146,4 +146,24 @@ where \(\lambda\) determines how strongly the smoothness requirement is enforced
 
 
 
+## Relativistic Electrobrachistochrone
+
+For the relativistic case we only consider moving charged particle in unfirom electric field, pointing downwards: $vec{E} = (0,-E)$. So, in the code I don't define the electric potential, I just define the electrical field strength and construct the suitable paramets for optimization based on that. 
+Relativistic kinetik energy: $ K = (\gamma - 1)mc^2, \qquad \gamma = frac{1}{\sqrt{1-frac{v^2}{c^2}}}$.
+At every point transfered energy is: $ K=qE_0(y_A-y) $
+based on this we can express the $\gamma$ factor becomes: $\gamma=1-frac{qE_0(y_A-y)}{mc^2}$
+relativistic velocity can be expressed as: $v_{\mathrm{rel}}(y)= c\times\sqrt{1 - frac{1}{(1+frac{qE_0(y_A-y)}{mc^2})^2}}$
+from these definitions in order to control the regime we use the factor: $ \eta = frac{qE_0\Delta y}{mc^2}$
+if $\eta \ll 1 $ then we have the non-relativstic case, if $\eta \approx 1$ we have quasyrelativistic case, and for $\eta \gg 1$ we will have relativstic regime. 
+Algorithm used for optimization is almost same as in calssical case, only changes made are the parameters what we defined differently. 
+Physical intuition tells us that in relativstic case straight path should be straight line. Because when velocities are reltaivstic there is no need of initial decline because increment of velocity becomes negligable so particle should choose the correct path. There exists also articles where analytic derivation of the same situation shows that path is straight line in relativistic regime. 
+
+
+
+
+
+
+
+
+
 
