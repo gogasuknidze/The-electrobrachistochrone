@@ -301,11 +301,11 @@ $$
   <img src="results/relativistic/eta_small.png" width="700">
 </p>
 
-For small values of \(\eta\), the numerical solution is almost identical to the classical cycloid.
+For small values of $\eta$, the numerical solution is almost identical to the classical cycloid.
 
 ---
 
-### Quasi-relativistic Regime (\(\eta\approx1\))
+### Quasi-relativistic Regime $(\eta\approx1\)$
 
 <p align="center">
   <img src="results/relativistic/eta_medium.png" width="700">
@@ -315,7 +315,7 @@ As relativistic effects become significant, the optimal trajectory begins to dev
 
 ---
 
-### Relativistic Regime (\(\eta\gg1\))
+### Relativistic Regime $(\eta\gg1\)$
 
 <p align="center">
   <img src="results/relativistic/eta_large.png" width="700">
