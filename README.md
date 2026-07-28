@@ -251,7 +251,7 @@ $$
 $$
 
 <p align="center">
-  <img src="results/classical/Linear_Potential.png" width="700">
+  <img src="results/classical/linear_Potential.png" width="700">
 </p>
 
 The optimized numerical trajectory almost perfectly coincides with the exact cycloid solution.
