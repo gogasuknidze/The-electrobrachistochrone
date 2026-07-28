@@ -315,7 +315,7 @@ As relativistic effects become significant, the optimal trajectory begins to dev
 
 ---
 
-### Relativistic Regime $(\eta\gg1\)$
+### Relativistic Regime $\eta\gg1$
 
 <p align="center">
   <img src="results/relativistic/eta_large.png" width="700">
