@@ -230,7 +230,131 @@ From physical intuition, we expect the optimal path in the relativistic regime t
 This prediction is also supported by analytical derivations available in the literature, which show that the solution for this situation is indeed a straight line.
 
 
+# Results
 
+## Classical Electrobrachistochrone
+
+The numerical method was tested for both uniform and non-uniform electric fields. In the uniform field, the numerical solution reproduces the exact cycloid with excellent agreement, validating the correctness of the optimization algorithm. The same numerical method can then be applied to arbitrary electric potentials, where analytical solutions are generally not available.
+
+### Uniform Electric Field
+
+Electric potential:
+
+$$
+\phi(x,y)=10y
+$$
+
+Electric field:
+
+$$
+\mathbf{E}=(0,-10)
+$$
+
+<p align="center">
+  <img src="results/classical/Linear_Potential.png" width="700">
+</p>
+
+The optimized numerical trajectory almost perfectly coincides with the exact cycloid solution.
+
+---
+
+### Quadratic Electric Potential
+
+Electric potential:
+
+$$
+\phi(x,y)=-0.01x^2+2y
+$$
+
+Electric field:
+
+$$
+\mathbf{E}=(0.02x,-2)
+$$
+
+<p align="center">
+  <img src="results/classical/quadratic.png" width="700">
+</p>
+
+For non-uniform electric fields, an analytical solution is generally unavailable. The optimization algorithm therefore determines the trajectory purely numerically. The cycloid is shown only for comparison with the previous example and has no physical meaning in this case.
+
+---
+
+### Simulation Parameters
+
+The following parameters were used for all classical simulations:
+
+| Parameter | Value |
+|-----------|------:|
+| Grid size | \(N=200\) |
+| Domain | \(x,y\in[0,100]\) |
+| Particle mass | \(m=1\) |
+| Charge | \(q=1\) |
+| Number of optimization points | \(n=80\) |
+| Smoothness parameter | \(\lambda=0.05\) |
+
+---
+
+## Relativistic Electrobrachistochrone
+
+For the relativistic case, the same optimization algorithm is used. The only modification is the relativistic expression for the particle velocity. The behavior of the optimal trajectory is controlled by the dimensionless parameter
+
+$$
+\eta=\frac{qE_0\Delta y}{mc^2}.
+$$
+
+As the value of \(\eta\) increases, the trajectory gradually changes from the classical cycloid to a straight line. This agrees with the physical expectation that, in the relativistic regime, increasing the particle's speed by descending further becomes ineffective, making the shortest path the optimal one.
+
+The electric field used in all simulations is
+
+$$
+\mathbf{E}=(0,-E_0).
+$$
+
+### Non-relativistic Regime (\(\eta\ll1\))
+
+<p align="center">
+  <img src="results/relativistic/eta_small.png" width="700">
+</p>
+
+For small values of \(\eta\), the numerical solution is almost identical to the classical cycloid.
+
+---
+
+### Quasi-relativistic Regime (\(\eta\approx1\))
+
+<p align="center">
+  <img src="results/relativistic/eta_medium.png" width="700">
+</p>
+
+As relativistic effects become significant, the optimal trajectory begins to deviate from the classical cycloid and gradually straightens.
+
+---
+
+### Relativistic Regime (\(\eta\gg1\))
+
+<p align="center">
+  <img src="results/relativistic/eta_large.png" width="700">
+</p>
+
+In the strongly relativistic regime, the optimized trajectory approaches a straight line, in agreement with the analytical prediction for this problem.
+
+---
+
+### Relativistic Simulation Parameters
+
+The parameters used in the simulations are
+
+| Parameter | Value |
+|-----------|------:|
+| Grid size | \(N=200\) |
+| Domain | \(x,y\in[0,100]\) |
+| Particle mass | \(m=1\) |
+| Charge | \(q=1\) |
+| Speed of light | \(c\) (varied to control the regime) |
+| Electric field strength | \(E_0=2\) |
+| Number of optimization points | \(n=80\) |
+| Smoothness parameter | \(\lambda=0.05\) |
 
 
 
