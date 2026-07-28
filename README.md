@@ -278,22 +278,6 @@ $$
 
 For non-uniform electric fields, an analytical solution is generally unavailable. The optimization algorithm therefore determines the trajectory purely numerically. The cycloid is shown only for comparison with the previous example and has no physical meaning in this case.
 
----
-
-### Simulation Parameters
-
-The following parameters were used for all classical simulations:
-
-| Parameter | Value |
-|-----------|------:|
-| Grid size | \(N=200\) |
-| Domain | \(x,y\in[0,100]\) |
-| Particle mass | \(m=1\) |
-| Charge | \(q=1\) |
-| Number of optimization points | \(n=80\) |
-| Smoothness parameter | \(\lambda=0.05\) |
-
----
 
 ## Relativistic Electrobrachistochrone
 
@@ -311,7 +295,7 @@ $$
 \mathbf{E}=(0,-E_0).
 $$
 
-### Non-relativistic Regime (\(\eta\ll1\))
+### Non-relativistic Regime $(\eta\ll1\)$
 
 <p align="center">
   <img src="results/relativistic/eta_small.png" width="700">
@@ -340,23 +324,3 @@ As relativistic effects become significant, the optimal trajectory begins to dev
 In the strongly relativistic regime, the optimized trajectory approaches a straight line, in agreement with the analytical prediction for this problem.
 
 ---
-
-### Relativistic Simulation Parameters
-
-The parameters used in the simulations are
-
-| Parameter | Value |
-|-----------|------:|
-| Grid size | \(N=200\) |
-| Domain | \(x,y\in[0,100]\) |
-| Particle mass | \(m=1\) |
-| Charge | \(q=1\) |
-| Speed of light | \(c\) (varied to control the regime) |
-| Electric field strength | \(E_0=2\) |
-| Number of optimization points | \(n=80\) |
-| Smoothness parameter | \(\lambda=0.05\) |
-
-
-
-
-
